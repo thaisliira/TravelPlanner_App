@@ -1,47 +1,47 @@
 [
-{
-  "id": 1,
-  "nomeViagem": "Fim de semana em Paris",
-  "destino": "Paris, França",
-  "inicio": "10-05-2026",
-  "fim": "12-05-2026",
-  "tipoViagem": "Cultural",
-  "imagem": "paris"
-},
-{
-  "id": 2,
-  "nomeViagem": "Praias do Nordeste",
-  "destino": "Maceió, Brasil",
-  "inicio": "01-07-2026",
-  "fim": "10-07-2026",
-  "tipoViagem": "Lazer",
-  "imagem": "noronha"
-},
-{
-  "id": 3,
-  "nomeViagem": "Aventura na Patagônia",
-  "destino": "El Calafate, Argentina",
-  "inicio": "15-09-2026",
-  "fim": "25-09-2026",
-  "tipoViagem": "Aventura",
-  "imagem": "patagonia"
-},
-{
-  "id": 4,
-  "nomeViagem": "Lua de mel em Bali",
-  "destino": "Bali, Indonésia",
-  "inicio": "05-11-2026",
-  "fim": "15-11-2026",
-  "tipoViagem": "Romântica",
-  "imagem": "bali"
-},
-{
-  "id": 5,
-  "nomeViagem": "Visita as Caves da Empresa",
-  "destino": "Porto, Portugal",
-  "inicio": "05-11-2026",
-  "fim": "07-11-2026",
-  "tipoViagem": "Trabalho",
-  "imagem": "porto"
-}
+  {
+    "id": 1,
+    "tripName": "Weekend in Paris",
+    "tripDestination": "Paris, France",
+    "tripStart": "10-05-2026",
+    "tripEnd": "12-05-2026",
+    "tripType": "Cultural",
+    "image": "paris"
+  },
+  {
+    "id": 2,
+    "tripName": "Northeast Beaches",
+    "tripDestination": "Maceio, Brazil",
+    "tripStart": "01-07-2026",
+    "tripEnd": "10-07-2026",
+    "tripType": "Leisure",
+    "image": "noronha"
+  },
+  {
+    "id": 3,
+    "tripName": "Patagonia Adventure",
+    "tripDestination": "El Calafate, Argentina",
+    "tripStart": "15-09-2026",
+    "tripEnd": "25-09-2026",
+    "tripType": "Adventure",
+    "image": "patagonia"
+  },
+  {
+    "id": 4,
+    "tripName": "Honeymoon in Bali",
+    "tripDestination": "Bali, Indonesia",
+    "tripStart": "05-11-2026",
+    "tripEnd": "15-11-2026",
+    "tripType": "Leisure",
+    "image": "bali"
+  },
+  {
+    "id": 5,
+    "tripName": "Company Cellar Visit",
+    "tripDestination": "Porto, Portugal",
+    "tripStart": "05-11-2026",
+    "tripEnd": "07-11-2026",
+    "tripType": "Work",
+    "image": "porto"
+  }
 ]

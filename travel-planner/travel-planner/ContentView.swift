@@ -38,7 +38,7 @@ struct ContentView: View {
                             VStack(alignment: .leading, spacing: 3) {
                                 Text(viagem.tripName)
                                     .font(.headline)
-                                Text(viagem.destination)
+                                Text(viagem.tripDestination)
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }

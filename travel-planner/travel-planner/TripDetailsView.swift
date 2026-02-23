@@ -35,7 +35,7 @@ struct tripDetailsView: View {
                     Text(travel.tripName).font(.title2).bold()
                     Divider()
                     VStack(alignment: .leading, spacing: 10) {
-                        Label("Destination: \(travel.destination)", systemImage: "mappin.and.ellipse")
+                        Label("Destination: \(travel.tripDestination)", systemImage: "mappin.and.ellipse")
                         Label("Start: \(travel.tripStart)", systemImage: "calendar")
                         Label("End: \(travel.tripEnd)", systemImage: "calendar.badge.clock")
                         Label("Type: \(travel.tripType)", systemImage: "tag.fill")
@@ -50,7 +50,7 @@ struct tripDetailsView: View {
                 Form {
                     Section("Edit Information") {
                         TextField("Name", text: $travel.tripName)
-                        TextField("Destination", text: $travel.destination)
+                        TextField("Destination", text: $travel.tripDestination)
                         Picker("Type", selection: $travel.tripType) {
                             ForEach(types, id: \.self) { Text($0) }
                         }

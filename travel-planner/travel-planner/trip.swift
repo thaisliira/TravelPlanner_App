@@ -10,7 +10,7 @@ import Foundation
 struct trip: Codable, Identifiable {
     let id: Int
     var tripName: String
-    var destination: String
+    var tripDestination: String
     var tripStart: String
     var tripEnd: String
     var tripType: String

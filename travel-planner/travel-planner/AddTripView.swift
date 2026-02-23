@@ -14,7 +14,7 @@ struct AddTripView: View {
     
     // Nomes em inglês como pediste
     @State private var name = ""
-    @State private var destination = "" // Sugestão: destination
+    @State private var destination = ""
     @State private var startDate = ""
     @State private var endDate = ""
     @State private var selectedType = "Leisure"
@@ -58,7 +58,7 @@ struct AddTripView: View {
                 }
             }
             .navigationTitle("New Trip")
-            .onChange(of: selectedItem) { newItem in
+            .onChange(of: selectedItem) { oldValue, newItem in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
                         selectedImageData = data
@@ -74,7 +74,7 @@ struct AddTripView: View {
                         let newTrip = trip(
                             id: Int.random(in: 100...9999),
                             tripName: name,
-                            destination: destination,
+                            tripDestination: destination,
                             tripStart: startDate,
                             tripEnd: endDate,
                             tripType: selectedType,
