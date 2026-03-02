@@ -12,7 +12,6 @@ struct AddTripView: View {
     @Environment(\.dismiss) var dismiss
     var onAdd: (trip) -> Void
     
-    // Nomes em inglês como pediste
     @State private var name = ""
     @State private var destination = ""
     @State private var startDate = ""
