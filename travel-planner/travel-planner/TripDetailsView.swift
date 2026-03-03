@@ -13,27 +13,23 @@ struct tripDetailsView: View {
     let types = ["Leisure", "Work", "Family", "Adventure", "Cultural"]
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                ZStack(alignment: .bottomTrailing) {
-                    LinearGradient(colors: [Color.blue, Color(red: 0.0, green: 0.1, blue: 0.3)],
-                                               startPoint: .top,
-                                               endPoint: .bottom)
-                                    .ignoresSafeArea()
-                    if let data = travel.imageData, let uiImage = UIImage(data: data) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(height: 350)
-                            .clipped()
-                    } else {
-                        Image(travel.image)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(height: 350)
-                            .clipped()
+            ScrollView {
+                VStack(spacing: 16) {
+                    ZStack(alignment: .bottomTrailing) {
+                        if let data = travel.imageData, let uiImage = UIImage(data: data) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(height: 350)
+                                .clipped()
+                        } else {
+                            Image(travel.image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(height: 350)
+                                .clipped()
+                        }
                     }
-                }
 
                 VStack(spacing: 8) {
                     Text(travel.tripName).font(.title2).bold()

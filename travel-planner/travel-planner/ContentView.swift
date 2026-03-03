@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                            LinearGradient(colors: [Color.blue.opacity(0.3), Color.black],
+                LinearGradient(colors: [Color.black.opacity(0.3), Color.blue],
                                            startPoint: .top,
                                            endPoint: .bottom)
                                 .ignoresSafeArea()
@@ -95,7 +95,6 @@ struct ContentView: View {
                 }
             }
         }
-        .preferredColorScheme(.dark)
     }
 
     func removerViagem(at offsets: IndexSet) {

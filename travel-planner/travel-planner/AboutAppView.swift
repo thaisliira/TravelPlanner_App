@@ -10,10 +10,10 @@ import SwiftUI
 struct AboutAppView: View {
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color.blue.opacity(0.3), Color.black],
-                           startPoint: .top,
-                           endPoint: .bottom)
-                .ignoresSafeArea()
+            LinearGradient(colors: [Color.black.opacity(0.3), Color.blue],
+                                       startPoint: .top,
+                                       endPoint: .bottom)
+                            .ignoresSafeArea()
             
             ScrollView {
                 VStack(spacing: 35) {
@@ -54,7 +54,7 @@ struct AboutAppView: View {
                         }
                     }
                     .padding()
-                    .background(Color.blue.opacity(0.3))
+                    .background(Color.green.opacity(0.3))
                     .cornerRadius(15)
 
                     VStack(spacing: 10) {
@@ -76,7 +76,6 @@ struct AboutAppView: View {
                 .padding()
             }
         }
-        .preferredColorScheme(.dark)
     }
 }
 
