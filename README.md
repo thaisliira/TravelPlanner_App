@@ -1,7 +1,6 @@
 # ✈️ Travel Planner
 
 > A simple and intuitive iOS application developed with SwiftUI to help users organize their upcoming trips.  
-> This project was created as part of a mobile development assessment.
 
 ---
 
