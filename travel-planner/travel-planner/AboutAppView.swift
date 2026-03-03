@@ -54,8 +54,7 @@ struct AboutAppView: View {
                         }
                     }
                     .padding()
-                    .background(Color.green.opacity(0.3))
-                    .cornerRadius(15)
+                    .background (Color(red: 0.05, green: 0.10, blue: 0.25))                 .cornerRadius(15)
 
                     VStack(spacing: 10) {
                         Text("Rate this App")
