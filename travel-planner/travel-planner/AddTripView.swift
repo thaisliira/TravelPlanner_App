@@ -24,36 +24,44 @@ struct AddTripView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
-                Section("Trip Info") {
-                    TextField("Name", text: $name)
-                    TextField("Destination", text: $destination)
-                    
-                    Picker("Type", selection: $selectedType) {
-                        ForEach(categories, id: \.self) { category in
-                            Text(category)
+            ZStack {
+                LinearGradient(colors: [Color.black.opacity(0.3), Color.blue],
+                               startPoint: .top,
+                               endPoint: .bottom)
+                    .ignoresSafeArea()
+                Form {
+                    Section("Trip Info") {
+                        TextField("Name", text: $name)
+                        TextField("Destination", text: $destination)
+                        
+                        Picker("Type", selection: $selectedType) {
+                            ForEach(categories, id: \.self) { category in
+                                Text(category)
+                            }
                         }
                     }
-                }
-                
-                Section("Photo") {
-                    PhotosPicker(selection: $selectedItem, matching: .images) {
-                        Label("Pick from Gallery", systemImage: "photo.badge.plus")
+                    
+                    Section("Photo") {
+                        PhotosPicker(selection: $selectedItem, matching: .images) {
+                            Label("Pick from Gallery", systemImage: "photo.badge.plus")
+                        }
+                        
+                        if let data = selectedImageData, let uiImage = UIImage(data: data) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 180)
+                                .cornerRadius(12)
+                        }
                     }
                     
-                    if let data = selectedImageData, let uiImage = UIImage(data: data) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 180)
-                            .cornerRadius(12)
+                    Section("Dates") {
+                        TextField("Start Date (DD/MM/YYYY)", text: $startDate)
+                        TextField("End Date (DD/MM/YYYY)", text: $endDate)
                     }
                 }
-                
-                Section("Dates") {
-                    TextField("Start Date (DD/MM/YYYY)", text: $startDate)
-                    TextField("End Date (DD/MM/YYYY)", text: $endDate)
-                }            }
+                .scrollContentBackground(.hidden)
+            }
             .navigationTitle("New Trip")
             .onChange(of: selectedItem) { oldValue, newItem in
                 Task {

@@ -13,6 +13,12 @@ struct tripDetailsView: View {
     let types = ["Leisure", "Work", "Family", "Adventure", "Cultural"]
 
     var body: some View {
+        ZStack {
+            LinearGradient(colors: [Color.black.opacity(0.3), Color.blue],
+                           startPoint: .top,
+                           endPoint: .bottom)
+                .ignoresSafeArea()
+
             ScrollView {
                 VStack(spacing: 16) {
                     ZStack(alignment: .bottomTrailing) {
@@ -31,36 +37,59 @@ struct tripDetailsView: View {
                         }
                     }
 
-                VStack(spacing: 8) {
-                    Text(travel.tripName).font(.title2).bold()
-                    Divider()
-                    VStack(alignment: .leading, spacing: 10) {
-                        Label("Destination: \(travel.tripDestination)", systemImage: "mappin.and.ellipse")
-                        Label("Start: \(travel.tripStart)", systemImage: "calendar")
-                        Label("End: \(travel.tripEnd)", systemImage: "calendar.badge.clock")
-                        Label(" \(travel.tripType)", systemImage: "tag.fill")
-                    }.font(.body)
-                }.padding()
+                    VStack(spacing: 8) {
+                        Text(travel.tripName)
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.white)
+                        
+                        Divider()
+                            .background(Color.white.opacity(0.5))
+
+                        VStack(alignment: .leading, spacing: 10) {
+                            Label("Destination: \(travel.tripDestination)", systemImage: "mappin.and.ellipse")
+                            Label("Start: \(travel.tripStart)", systemImage: "calendar")
+                            Label("End: \(travel.tripEnd)", systemImage: "calendar.badge.clock")
+                            Label(" \(travel.tripType)", systemImage: "tag.fill")
+                        }
+                        .font(.body)
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                }
             }
         }
         .navigationTitle("Details")
-        .toolbar { Button("Edit") { isEditing = true } }
+        .toolbar {
+            Button("Edit") { isEditing = true }
+        }
         .sheet(isPresented: $isEditing) {
             NavigationStack {
-                Form {
-                    Section() {
-                        TextField("Name", text: $travel.tripName)
-                        TextField("Destination", text: $travel.tripDestination)
-                        TextField("Start Date (DD/MM/YYYY)", text: $travel.tripStart)
-                        TextField("End Date (DD/MM/YYYY)", text: $travel.tripEnd)
-                        Picker("Type", selection: $travel.tripType) {
-                            ForEach(types, id: \.self) { type in
-                                Text(type).tag(type)
+                ZStack {
+                    LinearGradient(colors: [Color.black.opacity(0.3), Color.blue],
+                                   startPoint: .top,
+                                   endPoint: .bottom)
+                        .ignoresSafeArea()
+
+                    Form {
+                        Section() {
+                            TextField("Name", text: $travel.tripName)
+                            TextField("Destination", text: $travel.tripDestination)
+                            TextField("Start Date (DD/MM/YYYY)", text: $travel.tripStart)
+                            TextField("End Date (DD/MM/YYYY)", text: $travel.tripEnd)
+                            Picker("Type", selection: $travel.tripType) {
+                                ForEach(types, id: \.self) { type in
+                                    Text(type).tag(type)
+                                }
                             }
                         }
-                    }                }
-                .navigationTitle("Edit Information")
-                .toolbar { Button("Done") { isEditing = false } }
+                    }
+                    .scrollContentBackground(.hidden)
+                }
+                .navigationTitle("Edit my Trip")
+                .toolbar {
+                    Button("Done") { isEditing = false }
+                }
             }
         }
     }
