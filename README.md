@@ -33,7 +33,7 @@ Users can select real photos directly from their device’s gallery using **Phot
 <p align="center">
   <img src="PrintScreen/main_page.png" width="238">
   <img src="PrintScreen/about.png" width="235">
-  <img src="PrintScreen/trip_details.png" width="250">
+  <img src="PrintScreen/trip_details.png" width="233">
 </p>
 
 ---
