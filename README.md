@@ -1,7 +1,6 @@
 # ✈️ Travel Planner
 
 > A simple and intuitive iOS application developed with SwiftUI to help users organize their upcoming trips.  
-> This project was created as part of a mobile development assessment.
 
 ---
 
@@ -29,6 +28,16 @@ Users can select real photos directly from their device’s gallery using **Phot
 
 ---
 
+## 🎥 PrintScreen
+
+<p align="center">
+  <img src="PrintScreen/main_page.png" width="238">
+  <img src="PrintScreen/about.png" width="235">
+  <img src="PrintScreen/trip_details.png" width="250">
+</p>
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Language:** Swift 5.10  
@@ -40,4 +49,4 @@ Users can select real photos directly from their device’s gallery using **Phot
 
 ## 👩‍💻 Author
 
-**Thais Lira**
+Developed by **Thais Lira**
