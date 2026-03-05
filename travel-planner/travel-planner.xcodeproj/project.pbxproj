@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		0F30B4972F4C932300E71D53 /* travel-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "travel-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F30B4972F4C932300E71D53 /* Travel Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		0F30B4982F4C932300E71D53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F30B4972F4C932300E71D53 /* travel-planner.app */,
+				0F30B4972F4C932300E71D53 /* Travel Planner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F30B4962F4C932300E71D53 /* travel-planner */ = {
+		0F30B4962F4C932300E71D53 /* Travel Planner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F30B4A22F4C932400E71D53 /* Build configuration list for PBXNativeTarget "travel-planner" */;
+			buildConfigurationList = 0F30B4A22F4C932400E71D53 /* Build configuration list for PBXNativeTarget "Travel Planner" */;
 			buildPhases = (
 				0F30B4932F4C932300E71D53 /* Sources */,
 				0F30B4942F4C932300E71D53 /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				0F30B4992F4C932300E71D53 /* travel-planner */,
 			);
-			name = "travel-planner";
+			name = "Travel Planner";
 			packageProductDependencies = (
 			);
 			productName = "travel-planner";
-			productReference = 0F30B4972F4C932300E71D53 /* travel-planner.app */;
+			productReference = 0F30B4972F4C932300E71D53 /* Travel Planner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F30B4962F4C932300E71D53 /* travel-planner */,
+				0F30B4962F4C932300E71D53 /* Travel Planner */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +318,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F30B4A22F4C932400E71D53 /* Build configuration list for PBXNativeTarget "travel-planner" */ = {
+		0F30B4A22F4C932400E71D53 /* Build configuration list for PBXNativeTarget "Travel Planner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F30B4A32F4C932400E71D53 /* Debug */,
